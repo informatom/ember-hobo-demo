@@ -138,7 +138,7 @@ All the application files are in it's Javascript directory [contracting](https:/
 Yes, everything is written in [Coffeescript](http://coffeescript.org/) instead of plain Javascript. I got into Coffeescript with this project and I quite like it because it looks way more Ruby'esque than plain Javascript. I haven't used [Ember Script](http://emberscript.com/) in this project, which could be the next step to go.
 
 If you are new to Ember:
-The best place to start learning Ember is the [Ember Guides](http://emberjs.com/guides/)
+The best place to start learning Ember is the [Ember Guides](http://emberjs.com/guides/).
 
 ## Improvements and suggestions
 
