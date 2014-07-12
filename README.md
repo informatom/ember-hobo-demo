@@ -135,7 +135,7 @@ Just have a look into the application yourself, it is created at
 [contracting2.js.coffee](https://github.com/informatom/ember-hobo-demo/blob/master/app/assets/javascripts/contracting2.js.coffee).
 All the application files are in it's Javascript directory [contracting](https://github.com/informatom/ember-hobo-demo/tree/master/app/assets/javascripts/contracting) in the assets.
 
-Yes, everything is written in [Coffeescript](http://coffeescript.org/) insted of plain Javascript. I got into Coffeescript with this project and I quite like it because it looks way more Ruby'esque than plain Javascript. I haven't used [Ember script](http://emberscript.com/) in this project, which could be the next step to go.
+Yes, everything is written in [Coffeescript](http://coffeescript.org/) instead of plain Javascript. I got into Coffeescript with this project and I quite like it because it looks way more Ruby'esque than plain Javascript. I haven't used [Ember Script](http://emberscript.com/) in this project, which could be the next step to go.
 
 If you are new to Ember:
 The best place to start learning Ember is the [Ember Guides](http://emberjs.com/guides/)
