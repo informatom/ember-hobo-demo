@@ -109,7 +109,18 @@ in case we want the regular answer as well, an action looks like this:
   end
 ```
 
+To customize the asset handling inlude in `development.rb`:
+```ruby
+config.ember.variant = :development
+```
+
+and in in `production.rb`:
+```ruby
+config.ember.variant = :production
+```
+
+
 ## Improvements and suggestions
 
-As this is my first Hobo / Ember app, it won't be porfect, probably there are even errors in stil.
+As this is my first Hobo / Ember app, it is far from perfect, probably there are even errors in stil.
 If you hive feedback for me, please open a ticket to this repo und let's start the discussion.
