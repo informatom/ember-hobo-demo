@@ -124,7 +124,7 @@ Environment unspecific settings go into `application.rb`:
 config.ember.app_name = "Contracting"
 config.handlebars.templates_root = "contracting/templates"
 config.handlebars.precompile = true
-``
+```
 
 ## And what about Ember ?
 
