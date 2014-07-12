@@ -141,5 +141,7 @@ The best place to start learning Ember is the [Ember Guides](http://emberjs.com/
 
 ## Improvements and suggestions
 
-As this is my first Hobo / Ember app, it is far from perfect, probably there are even errors in stil.
-If you hive feedback for me, please open a ticket to this repo und let's start the discussion.
+As this is my first Hobo / Ember app, it is far from perfect, probably there are even errors in.
+If you have feedback or questions for me, please open a ticket to this repo und let's start the discussion.
+
+Besides that, have fun with Ember and Hobo!
