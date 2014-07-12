@@ -21,7 +21,7 @@ showcasing the integration and changes necessary for playing well with current H
 
 ## Structure
 
-We have three Resources contracts, contractitems and consumableitems, both on the Ember as well as the Hobo side.
+We have three resources: contracts, contractitems and consumableitems, both on the Ember as well as the Hobo side.
 Contracts have many contract items, contractitems have many consumableitems. Attrubutes math to each other, that means demo_attribute in Rails would have a demoAttribute on the Ember side.
 
 The ember data store uses [Ember Data](https://github.com/emberjs/data) and the [Active Model Adapter](http://emberjs.com/api/data/classes/DS.ActiveModelAdapter.html) for serializing and deserializing model data into json requests and data.
@@ -34,3 +34,77 @@ Three gems are used on the Hobo side for introducing Ember:
 * [Active_model_serializers](https://github.com/rails-api/active_model_serializers) cares for serializing and deserializing of data
 * [Ember Rails](https://github.com/emberjs/ember-rails) provides Generators
 * [Ember Source](https://rubygems.org/gems/ember-source) takes care for the assets
+
+## Changes in the Hobo app
+
+There are some changes necassary in a Hobo app to be consumed by a Ember app.
+Data has to be serialized e certain way: For each item, the ids of the assolciated items are included in the json payload.
+This is done in the serialzer, which also gives us the opportunity to decide which attributes should be transfered to the clients and
+which information on which relationships should be provided.
+
+```ruby
+class ContractitemSerializer < ActiveModel::Serializer
+  embed :ids
+
+  attributes :id, :position, :term, :startdate, :product_number,
+             :description, :amount, :unit, :volume_bw,
+             :volume_color, :marge, :vat, :discount_abs, :monitoring_rate,
+             :created_at, :updated_at
+
+  has_many :consumableitems
+  has_one :contract
+end
+```
+
+The controller has to be changed as well (probably due to my ignorance).
+If we only tell the controller to also respond to json, we get an error message, that the render methods are private.
+As we don't care about the html answers here, we override them:
+
+```ruby
+class Contracting::ContractitemsController < Contracting::ContractingSiteController
+  hobo_model_controller
+  auto_actions :all
+  respond_to :html, :json
+
+  def index
+    hobo_index do
+      render json: this
+    end
+  end
+
+  def show
+    hobo_show do
+      render json: this
+    end
+  end
+
+  def create
+    hobo_create do
+      render json: this
+    end
+  end
+
+  def update
+    hobo_update do
+      render json: this
+    end
+  end
+
+  def destroy
+    hobo_destroy do
+      render json: nil
+    end
+  end
+end
+```
+
+in case we want the regular answer as well, an action looks like this:
+
+```ruby
+  def index
+    hobo_index do |format|
+      format.json { render json: this }
+      format.html { hobo_index }
+    end
+  end
+```
