@@ -21,6 +21,17 @@ After development of a minimal Ruby On Rails and Ember application this it was p
 is the Hobo application stripped down to the bare minimum.
 It is showcasing the integration and changes necessary for playing well with current Hobo (2.1).
 
+
+## Installation
+
+Installation is quite easy, as we are using SQLite for this demo.
+The classical steps:
+* `bundle install`
+* `rails s`
+spins up a [Puma](http://puma.io/) web server that listens to (http://localhost:3000) where you will find a link to the Ember app that is located at
+(http://localhost:3000/contracting/contracts/#). (A minimal database is included in the repo, in case you wonder.)
+
+
 ## Structure
 
 We have three resources: `contract`, `contractitem` and `consumableitem`, both on the Ember as well as the Hobo side.
@@ -148,16 +159,6 @@ this project, which could be the next step to go to reduce the amount of code ev
 
 If you are new to Ember and I have teased you enough:
 The best place to start learning Ember is the [Ember Guides](http://emberjs.com/guides/).
-
-## Installation
-
-Installation is quite easy, as we are using SQLite for this demo.
-The classical 3 steps:
-* `bundle install`
-* `rake db:migrate`
-* `rails s`
-spins up a puma web server that listens to http://localhost:3000 where you will find a link to the Ember app that is located at
-http://localhost:3000/contracting/contracts/#
 
 
 ## Improvements and suggestions
