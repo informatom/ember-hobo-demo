@@ -1,0 +1,7 @@
+<def tag="main-nav">
+  <navigation class="main-nav" merge-attrs param="default">
+    <nav-item with="&Contract">
+      <ht key="contract.nav_item" count="100"><model-name-human count="100"/></ht>
+    </nav-item>
+  </navigation>
+</def>

@@ -1,0 +1,3 @@
+# <%= CONFIG[:] %>
+secret_token: "e4e24a41040f0e1ea108a0d4a24589cac01841bb9e161adaa3c19d61607968710f1f763"
+secret_key_base: "3141592653141"

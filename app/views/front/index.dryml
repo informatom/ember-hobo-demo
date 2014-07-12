@@ -1,0 +1,16 @@
+<page title="Home">
+
+  <body: class="front-page"/>
+
+  <content:>
+    <header class="content-header hero-unit">
+      <h1><t key='mercator.welcome_at'/> <app-name/></h1>
+      <section class="welcome-message">
+        <h3>Ember.js + Hobo Demo</h3>
+      </section>
+    </header>
+    <section class="content-body">
+      Get to the demo: <a with="&Contract" subsite="contracting">Contracts</a>
+    </section>
+  </content:>
+</page>

@@ -1,0 +1,19 @@
+en:
+  activerecord:
+    models:
+      consumableitem:
+        one: Consumable Item
+        other: Consumable Items
+      contract:
+        one: Contract
+        other: Contracts
+      contractitem:
+        one: Contract Item
+        other: Contract Items
+
+    attributes:
+      contractitem:
+        volume: Monthly Printing Volume
+
+  mercator:
+    welcome_at: Welcome

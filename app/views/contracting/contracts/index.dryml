@@ -1,0 +1,16 @@
+<page title="Contracting">
+  <head:>
+    <meta charset="utf-8"/>
+    <%= stylesheet_link_tag "contracting2", :media => "all" %>
+    <%= csrf_meta_tags %>
+  </head:>
+
+  <body: class="front-page">
+    <section class="content-body">
+      <script type="text/x-handlebars">
+        {{outlet}}
+      </script>
+      <%= javascript_include_tag "contracting2" %>
+    </section>
+  </body:>
+</page>

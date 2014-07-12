@@ -1,0 +1,7 @@
+<def tag="main-nav">
+</def>
+
+<def attrs='include-search' tag='account-nav'>
+  <div class='nav-collapse collapse'>
+  </div>
+</def>
