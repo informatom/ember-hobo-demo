@@ -28,8 +28,8 @@ Installation is quite easy, as we are using SQLite for this demo.
 The classical steps:
 * `bundle install`
 * `rails s`
-spins up a [Puma](http://puma.io/) web server that listens to (http://localhost:3000) where you will find a link to the Ember app that is located at
-(http://localhost:3000/contracting/contracts/#). (A minimal database is included in the repo, in case you wonder.)
+spins up a [Puma](http://puma.io/) web server that listens to [http://localhost:3000] where you will find a link to the Ember app that is located at
+[http://localhost:3000/contracting/contracts/#]. (A minimal database is included in the repo, in case you wonder.)
 
 
 ## Structure
