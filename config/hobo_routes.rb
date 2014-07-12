@@ -7,16 +7,16 @@ Mercator::Application.routes.draw do
   namespace :contracting do
 
 
+    # Resource routes for controller contracting/contractitems
+    resources :contractitems
+
+
     # Resource routes for controller contracting/consumableitems
     resources :consumableitems
 
 
     # Resource routes for controller contracting/contracts
     resources :contracts
-
-
-    # Resource routes for controller contracting/contractitems
-    resources :contractitems
 
   end
 

@@ -23,9 +23,11 @@ class Contractitem < ActiveRecord::Base
   end
 
   attr_accessible :position, :product_number, :description, :amount, :unit, :volume,
-                  :product_price, :vat, :value, :discount_abs, :term, :startdate, :volume_bw, :volume_color,
-                  :marge, :monitoring_rate, :created_at, :updated_at
+                  :product_price, :vat, :value, :discount_abs, :term, :startdate,
+                  :volume_bw, :volume_color, :marge, :monitoring_rate, :created_at, :updated_at,
+                  :contract_id
 
+  belongs_to :contract
   has_many :consumableitems
 
   # --- Permissions --- #

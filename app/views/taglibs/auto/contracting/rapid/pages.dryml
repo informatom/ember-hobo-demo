@@ -209,7 +209,7 @@
 
     <content-body: param>
       <view:description param="description" />
-      <field-list fields="position, product_number, amount, unit, volume, product_price, vat, value, discount_abs, term, startdate, volume_bw, volume_color, marge, monitoring_rate" param/>
+      <field-list fields="position, product_number, amount, unit, volume, product_price, vat, value, discount_abs, term, startdate, volume_bw, volume_color, marge, monitoring_rate, contract" param/>
     </content-body:>
 
   </page>

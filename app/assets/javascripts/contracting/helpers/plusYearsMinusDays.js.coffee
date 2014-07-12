@@ -1,5 +1,5 @@
 Ember.Handlebars.helper "plusYearsMinusDays", (value, options) ->
-  moment.lang "de"
+  moment.lang "en"
   formatted_date = moment(value).add("years", options.hash["years"])
                                 .subtract("days", options.hash["days"]).format("DD.MM.YY")
   new Ember.Handlebars.SafeString(formatted_date)

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140712075923) do
+ActiveRecord::Schema.define(version: 20140712120608) do
 
   create_table "consumableitems", force: true do |t|
     t.integer  "position"
@@ -56,7 +56,10 @@ ActiveRecord::Schema.define(version: 20140712075923) do
     t.decimal  "monitoring_rate", precision: 10, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "contract_id"
   end
+
+  add_index "contractitems", ["contract_id"], name: "index_contractitems_on_contract_id"
 
   create_table "contracts", force: true do |t|
     t.integer  "runtime"
